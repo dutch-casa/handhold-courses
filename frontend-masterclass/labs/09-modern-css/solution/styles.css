@@ -1,0 +1,69 @@
+@layer reset, base, components, utilities;
+
+@layer reset {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+}
+
+:root {
+  color-scheme: light dark;
+  --color-primary: hsl(220, 91%, 60%);
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  padding: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+  color: light-dark(#1e293b, #e2e8f0);
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.cards {
+  display: grid;
+  gap: 16px;
+}
+
+.card {
+  border: 1px solid light-dark(#e2e8f0, #334155);
+  border-radius: 8px;
+  padding: 16px;
+  transition: box-shadow 0.2s ease-out;
+
+  & .title {
+    font-size: 1.1rem;
+    margin: 0 0 8px;
+  }
+
+  &:hover {
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.08);
+  }
+
+  & p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: light-dark(#64748b, #94a3b8);
+  }
+
+  & img {
+    border-radius: 4px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  @media (min-width: 768px) {
+    padding: 24px;
+  }
+}
+
+.card:has(img) {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 16px;
+  align-items: center;
+}

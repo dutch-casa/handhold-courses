@@ -1,0 +1,171 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  --bg: #f8f9fa;
+  --bg-card: #fff;
+  --text: #1a1a2e;
+  --text-muted: #6b7280;
+  --border: #d1d5db;
+  --accent: #667eea;
+  --pill-bg: #f0ecff;
+  --pill-text: #5b4a9e;
+  --radius: 10px;
+  --radius-sm: 8px;
+  --shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.03),
+    0 1px 2px rgba(0, 0, 0, 0.05),
+    0 2px 6px -1px rgba(0, 0, 0, 0.06);
+  --shadow-hover:
+    0 0 0 1px rgba(0, 0, 0, 0.03),
+    0 2px 4px rgba(0, 0, 0, 0.06),
+    0 6px 16px -2px rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f0f1a;
+    --bg-card: #1e1e2e;
+    --text: #e2e2e8;
+    --text-muted: #9ca3af;
+    --border: #3f3f5a;
+    --accent: #818cf8;
+    --pill-bg: rgba(129, 140, 248, 0.12);
+    --pill-text: #a5b4fc;
+    --shadow: 0 0 0 1px rgba(255, 255, 255, 0.06);
+    --shadow-hover: 0 0 0 1px rgba(255, 255, 255, 0.1);
+  }
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  padding: 48px 24px;
+}
+
+/* --- Container --- */
+
+body > div,
+div:first-child {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* --- Filter controls --- */
+
+div > div:first-child {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+/* --- Inputs & selects --- */
+
+input,
+select {
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border);
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--text);
+  background: var(--bg-card);
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+  min-height: 44px;
+}
+
+input {
+  flex: 1;
+  min-width: 180px;
+}
+
+input::placeholder {
+  color: var(--text-muted);
+}
+
+input:focus-visible,
+select:focus-visible {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+}
+
+/* --- List --- */
+
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+li {
+  padding: 14px 18px;
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  box-shadow: var(--shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 200ms ease-out, box-shadow 200ms ease-out;
+}
+
+/* --- Item content --- */
+
+li strong {
+  font-weight: 600;
+}
+
+li span {
+  margin-left: 10px;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  background: var(--pill-bg);
+  color: var(--pill-text);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+time {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- Count footer --- */
+
+ul + p {
+  margin-top: 16px;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- Hover (pointer devices only) --- */
+
+@media (hover: hover) {
+  li:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-hover);
+  }
+}
+
+/* --- Reduced motion --- */
+
+@media (prefers-reduced-motion: reduce) {
+  li,
+  input,
+  select {
+    transition: none;
+  }
+}

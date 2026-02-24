@@ -1,0 +1,4 @@
+workspace: fresh
+test: npx tsc --noEmit && node test.js
+open:
+  - types.ts

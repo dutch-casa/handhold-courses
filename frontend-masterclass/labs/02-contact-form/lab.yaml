@@ -1,0 +1,5 @@
+workspace: fresh
+test: node test.js
+setup: []
+open:
+  - index.html

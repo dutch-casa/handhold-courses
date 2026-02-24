@@ -1,0 +1,6 @@
+workspace: fresh
+test: npx tsc --noEmit && node test.js
+open:
+  - src/PostList.tsx
+  - src/PostDetail.tsx
+  - src/App.tsx

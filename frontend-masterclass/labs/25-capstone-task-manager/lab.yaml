@@ -1,0 +1,7 @@
+workspace: fresh
+test: npx tsc --noEmit && node test.js
+open:
+  - src/App.tsx
+  - src/TaskList.tsx
+  - src/AddTask.tsx
+  - src/api.ts

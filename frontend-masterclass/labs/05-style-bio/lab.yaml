@@ -1,0 +1,4 @@
+workspace: fresh
+test: node test.js
+open:
+  - index.html

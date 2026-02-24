@@ -1,0 +1,166 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  --bg: #f5f3ff;
+  --bg-card: #fff;
+  --text: #1a1a2e;
+  --text-muted: #64748b;
+  --text-bio: #555;
+  --accent: #667eea;
+  --accent-end: #764ba2;
+  --pill-bg: #f0ecff;
+  --pill-text: #5b4a9e;
+  --border: #e5e7eb;
+  --radius-card: 12px;
+  --radius-pill: 9999px;
+  --shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.03),
+    0 1px 2px rgba(0, 0, 0, 0.06),
+    0 4px 12px -2px rgba(0, 0, 0, 0.08);
+  --shadow-hover:
+    0 0 0 1px rgba(0, 0, 0, 0.03),
+    0 2px 4px rgba(0, 0, 0, 0.06),
+    0 8px 24px -4px rgba(0, 0, 0, 0.12);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f0f1a;
+    --bg-card: #1e1e2e;
+    --text: #e2e2e8;
+    --text-muted: #9ca3af;
+    --text-bio: #a1a1aa;
+    --accent: #818cf8;
+    --accent-end: #a78bfa;
+    --pill-bg: rgba(129, 140, 248, 0.12);
+    --pill-text: #a5b4fc;
+    --border: #2d2d3f;
+    --shadow: 0 0 0 1px rgba(255, 255, 255, 0.06);
+    --shadow-hover: 0 0 0 1px rgba(255, 255, 255, 0.1);
+  }
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- Page layout --- */
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding: 48px 24px;
+}
+
+main > h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+main > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+/* --- Profile card --- */
+
+article {
+  max-width: 360px;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  background: var(--bg-card);
+  box-shadow: var(--shadow);
+  transition: transform 200ms ease-out, box-shadow 200ms ease-out;
+}
+
+/* --- Avatar header --- */
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  padding: 32px 0 16px;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-end) 100%);
+}
+
+.avatar img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 3px solid var(--bg-card);
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+
+/* --- Card body --- */
+
+article > div:last-child {
+  padding: 20px 24px 28px;
+}
+
+article h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
+}
+
+article p {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--text-bio);
+  margin-bottom: 16px;
+}
+
+/* --- Skill pills --- */
+
+article ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+}
+
+article li {
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  background: var(--pill-bg);
+  color: var(--pill-text);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* --- Hover (pointer devices only) --- */
+
+@media (hover: hover) {
+  article:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+  }
+}
+
+/* --- Reduced motion --- */
+
+@media (prefers-reduced-motion: reduce) {
+  article {
+    transition: none;
+  }
+}

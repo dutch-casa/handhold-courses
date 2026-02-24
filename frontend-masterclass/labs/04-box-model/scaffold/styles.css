@@ -1,0 +1,50 @@
+/* TODO: Add the universal box-sizing reset here */
+
+body {
+  font-family: system-ui, sans-serif;
+  padding: 24px;
+  color: #1e293b;
+}
+
+/* Task 1: This box should be exactly 300px wide total.
+   Currently it's 344px because content-box adds padding and border. */
+.box-1 {
+  width: 300px;
+  padding: 20px;
+  border: 2px solid #3b82f6;
+  background: #eff6ff;
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+
+/* Task 2: These two cards should have exactly 32px gap.
+   Currently the margins collapse to 24px. Fix it. */
+.card-stack {
+  /* TODO: Fix the margin collapse between children */
+}
+
+.card-a {
+  background: #f0fdf4;
+  border: 1px solid #22c55e;
+  padding: 16px;
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+
+.card-b {
+  background: #fef3c7;
+  border: 1px solid #f59e0b;
+  padding: 16px;
+  border-radius: 4px;
+  margin-top: 24px;
+}
+
+.gap-note {
+  font-size: 12px;
+  color: #64748b;
+}
+
+/* Task 3: Center this container horizontally */
+.container {
+  /* TODO: Add max-width and margin auto to center */
+}

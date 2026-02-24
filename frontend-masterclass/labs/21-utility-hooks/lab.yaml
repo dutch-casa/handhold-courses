@@ -1,0 +1,6 @@
+workspace: fresh
+test: npx tsc --noEmit && node test.js
+open:
+  - src/useLocalStorage.ts
+  - src/useMediaQuery.ts
+  - src/useDebounce.ts

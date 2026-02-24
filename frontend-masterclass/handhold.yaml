@@ -1,0 +1,217 @@
+title: "Frontend Masterclass: Zero to React God"
+description: "From 'what is a tag' to polished React applications. HTML, CSS, Tailwind, JavaScript, TypeScript, React, composition patterns, and design engineering — taught from first principles with dense visual choreography."
+tags:
+  - frontend
+  - html
+  - css
+  - tailwind
+  - javascript
+  - typescript
+  - react
+  - design-engineering
+
+steps:
+  # ── Module 1: HTML Foundations ──────────────────────────────
+  - kind: lesson
+    title: "Lesson 1: What is the web?"
+    path: steps/01-what-is-the-web.md
+  - kind: lesson
+    title: "Lesson 2: Building blocks"
+    path: steps/02-building-blocks.md
+  - kind: lab
+    title: "Lab 1: Your first page"
+    path: labs/01-first-page/
+  - kind: lesson
+    title: "Lesson 3: Semantic HTML"
+    path: steps/03-semantic-html.md
+  - kind: lesson
+    title: "Lesson 4: Forms and inputs"
+    path: steps/04-forms-and-inputs.md
+  - kind: lab
+    title: "Lab 2: Build a contact form"
+    path: labs/02-contact-form/
+  - kind: lesson
+    title: "Lesson 5: The DOM"
+    path: steps/05-the-dom.md
+  - kind: lab
+    title: "Lab 3: Explore the DOM"
+    path: labs/03-explore-dom/
+
+  # ── Module 2: CSS Foundations ───────────────────────────────
+  - kind: lesson
+    title: "Lesson 6: How CSS works"
+    path: steps/06-how-css-works.md
+  - kind: lesson
+    title: "Lesson 7: The box model"
+    path: steps/07-the-box-model.md
+  - kind: lab
+    title: "Lab 4: Box model exercises"
+    path: labs/04-box-model/
+  - kind: lesson
+    title: "Lesson 8: Colors and typography"
+    path: steps/08-colors-and-typography.md
+  - kind: lesson
+    title: "Lesson 9: Selectors and combinators"
+    path: steps/09-selectors-and-combinators.md
+  - kind: lab
+    title: "Lab 5: Style the bio page"
+    path: labs/05-style-bio/
+  - kind: lesson
+    title: "Lesson 10: Flexbox"
+    path: steps/10-flexbox.md
+  - kind: lab
+    title: "Lab 6: Flexbox navigation"
+    path: labs/06-flexbox-nav/
+  - kind: lesson
+    title: "Lesson 11: CSS Grid"
+    path: steps/11-css-grid.md
+  - kind: lab
+    title: "Lab 7: Grid photo gallery"
+    path: labs/07-grid-gallery/
+  - kind: lesson
+    title: "Lesson 12: Responsive design"
+    path: steps/12-responsive-design.md
+  - kind: lab
+    title: "Lab 8: Responsive gallery"
+    path: labs/08-responsive-gallery/
+  - kind: lesson
+    title: "Lesson 13: CSS naming and architecture"
+    path: steps/13-css-naming-and-architecture.md
+  - kind: lesson
+    title: "Lesson 14: Modern CSS"
+    path: steps/14-modern-css.md
+  - kind: lab
+    title: "Lab 9: Modern CSS refactor"
+    path: labs/09-modern-css/
+
+  # ── Module 3: Tailwind CSS ─────────────────────────────────
+  - kind: lesson
+    title: "Lesson 15: Why Tailwind?"
+    path: steps/15-why-tailwind.md
+  - kind: lesson
+    title: "Lesson 16: Tailwind core"
+    path: steps/16-tailwind-core.md
+  - kind: lab
+    title: "Lab 10: Tailwind gallery"
+    path: labs/10-tailwind-gallery/
+  - kind: lesson
+    title: "Lesson 17: Tailwind 4"
+    path: steps/17-tailwind-4.md
+  - kind: lab
+    title: "Lab 11: Dashboard layout"
+    path: labs/11-dashboard-layout/
+
+  # ── Module 4: JavaScript & The DOM ─────────────────────────
+  - kind: lesson
+    title: "Lesson 18: JavaScript fundamentals"
+    path: steps/18-javascript-fundamentals.md
+  - kind: lesson
+    title: "Lesson 19: The DOM and JavaScript"
+    path: steps/19-dom-and-javascript.md
+  - kind: lab
+    title: "Lab 12: Interactive todo list"
+    path: labs/12-todo-list/
+  - kind: lesson
+    title: "Lesson 20: Async JavaScript"
+    path: steps/20-async-javascript.md
+  - kind: lab
+    title: "Lab 13: Fetch and display"
+    path: labs/13-fetch-display/
+
+  # ── Module 5: TypeScript ───────────────────────────────────
+  - kind: lesson
+    title: "Lesson 21: Why TypeScript?"
+    path: steps/21-why-typescript.md
+  - kind: lesson
+    title: "Lesson 22: TypeScript fundamentals"
+    path: steps/22-typescript-fundamentals.md
+  - kind: lesson
+    title: "Lesson 23: TypeScript for real"
+    path: steps/23-typescript-for-real.md
+  - kind: lab
+    title: "Lab 14: Type a real API"
+    path: labs/14-type-api/
+
+  # ── Module 6: React Fundamentals ───────────────────────────
+  - kind: lesson
+    title: "Lesson 24: What is React?"
+    path: steps/24-what-is-react.md
+  - kind: lesson
+    title: "Lesson 25: Components, props, and JSX"
+    path: steps/25-components-props-jsx.md
+  - kind: lab
+    title: "Lab 15: Profile card"
+    path: labs/15-profile-card/
+  - kind: lesson
+    title: "Lesson 26: State and events"
+    path: steps/26-state-and-events.md
+  - kind: lab
+    title: "Lab 16: Counter and form"
+    path: labs/16-counter-form/
+  - kind: lesson
+    title: "Lesson 27: Lists and conditional rendering"
+    path: steps/27-lists-and-conditional-rendering.md
+  - kind: lab
+    title: "Lab 17: Filterable list"
+    path: labs/17-filterable-list/
+  - kind: lesson
+    title: "Lesson 28: Data fetching the right way"
+    path: steps/28-data-fetching-the-right-way.md
+  - kind: lab
+    title: "Lab 18: Fetch and display posts"
+    path: labs/18-fetch-posts/
+
+  # ── Module 7: React Composition ────────────────────────────
+  - kind: lesson
+    title: "Lesson 29: Composition over configuration"
+    path: steps/29-composition-over-configuration.md
+  - kind: lab
+    title: "Lab 19: Compound accordion"
+    path: labs/19-compound-accordion/
+  - kind: lesson
+    title: "Lesson 30: Context and providers"
+    path: steps/30-context-and-providers.md
+  - kind: lab
+    title: "Lab 20: Theme provider"
+    path: labs/20-theme-provider/
+  - kind: lesson
+    title: "Lesson 31: Custom hooks"
+    path: steps/31-custom-hooks.md
+  - kind: lab
+    title: "Lab 21: Utility hooks"
+    path: labs/21-utility-hooks/
+
+  # ── Module 8: Design Engineering ───────────────────────────
+  - kind: lesson
+    title: "Lesson 32: Design engineering principles"
+    path: steps/32-design-engineering-principles.md
+  - kind: lesson
+    title: "Lesson 33: Animations and transitions"
+    path: steps/33-animations-and-transitions.md
+  - kind: lab
+    title: "Lab 22: Notification system"
+    path: labs/22-notification-system/
+  - kind: lesson
+    title: "Lesson 34: Motion that matters"
+    path: steps/34-motion-that-matters.md
+  - kind: lab
+    title: "Lab 23: Animated tabs"
+    path: labs/23-animated-tabs/
+  - kind: lesson
+    title: "Lesson 35: Forms that work"
+    path: steps/34-forms-that-work.md
+  - kind: lab
+    title: "Lab 24: Accessible form"
+    path: labs/23-accessible-form/
+  - kind: lesson
+    title: "Lesson 36: Performance patterns"
+    path: steps/35-performance-patterns.md
+  - kind: lesson
+    title: "Lesson 37: The polished UI"
+    path: steps/36-the-polished-ui.md
+  - kind: lab
+    title: "Lab 25: Polished dashboard card"
+    path: labs/24-polished-card/
+  - kind: lab
+    title: "Lab 26: Capstone — Task manager"
+    path: labs/25-capstone-task-manager/

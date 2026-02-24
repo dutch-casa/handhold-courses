@@ -1,0 +1,70 @@
+/* TODO: Declare layer order at the top:
+   @layer reset, base, components, utilities; */
+
+/* TODO: Move this reset into @layer reset { ... } */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* TODO: Add color-scheme: light dark to :root */
+:root {
+  --color-primary: hsl(220, 91%, 60%);
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  padding: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+  /* TODO: Use light-dark() for the color value */
+  color: #1e293b;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.cards {
+  display: grid;
+  gap: 16px;
+}
+
+/* TODO: Refactor .card to use native CSS nesting
+   Nest .title, :hover, and the @media query inside .card { } */
+.card {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px;
+  transition: box-shadow 0.2s ease-out;
+}
+
+.card .title {
+  font-size: 1.1rem;
+  margin: 0 0 8px;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.08);
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.card img {
+  border-radius: 4px;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .card {
+    padding: 24px;
+  }
+}
+
+/* TODO: Add .card:has(img) rule
+   with grid display and grid-template-columns: 150px 1fr */

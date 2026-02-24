@@ -1,0 +1,7 @@
+{
+  "name": "dom-explorer-lab",
+  "private": true,
+  "dependencies": {
+    "jsdom": "^24.0.0"
+  }
+}

@@ -1,0 +1,5 @@
+workspace: fresh
+test: npx tsc --noEmit && node test.js
+open:
+  - src/Notification.tsx
+  - src/notifications.css

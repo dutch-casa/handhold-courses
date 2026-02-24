@@ -1,0 +1,5 @@
+workspace: fresh
+test: node test.js
+open:
+  - src/Card.tsx
+  - src/card.css

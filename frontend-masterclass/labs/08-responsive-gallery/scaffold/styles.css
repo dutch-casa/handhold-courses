@@ -1,0 +1,72 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-bg: #ffffff;
+  --color-text: #1e293b;
+  --color-muted: #64748b;
+  --color-border: #e2e8f0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  padding: 24px;
+  background: var(--color-bg);
+  color: var(--color-text);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* TODO: Use clamp() for fluid font-size (min 1.25rem, max 2rem) */
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+/* TODO: Add container-type: inline-size for container queries */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  display: grid;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease-out;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+.thumb {
+  height: 120px;
+}
+
+.info {
+  padding: 12px;
+}
+
+.info h2 {
+  margin: 0 0 4px;
+  font-size: 1rem;
+}
+
+.info p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+/* TODO: Add @container query — when card container is 300px+,
+   switch .card to horizontal layout with grid-template-columns */
+
+/* TODO: Add prefers-color-scheme: dark media query
+   Change --color-bg, --color-text, --color-muted, --color-border */
+
+/* TODO: Add prefers-reduced-motion: reduce media query
+   Disable transitions */

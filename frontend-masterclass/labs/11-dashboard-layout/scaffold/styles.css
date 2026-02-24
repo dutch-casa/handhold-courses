@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+/* TODO: Add @theme block with custom brand color
+   Example:
+   @theme {
+     --color-brand-500: oklch(0.62 0.19 250);
+     --color-brand-600: oklch(0.55 0.19 250);
+   }
+*/

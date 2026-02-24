@@ -1,0 +1,19 @@
+/* TODO: Add the universal box-sizing reset here */
+
+/* TODO: Define custom properties on :root
+   Use HSL colors. You need at least:
+   --color-primary, --color-text, --color-bg, --color-muted */
+
+body {
+  /* TODO: Set background to var(--color-bg) */
+  /* TODO: Set color to var(--color-text) */
+  padding: 24px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* TODO: Style headings with system font stack and --color-text */
+
+/* TODO: Style links — add a hover effect that changes color */
+
+/* TODO: Style list markers with --color-primary */
