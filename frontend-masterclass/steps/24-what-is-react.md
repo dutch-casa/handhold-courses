@@ -119,6 +119,8 @@ compose: 12-21
 {{zoom: 1x}} {{focus: none}}
 
 ```code:mental-code lang=tsx
+import { useState } from "react";
+
 // UI = f(state)
 function Counter() {
   const [count, setCount] = useState(0);
@@ -140,8 +142,8 @@ function Counter() {
 // State changes → re-render → new snapshot
 // React diffs old vs new → updates only changes
 ---
-render: 2-16
-snapshot: 5-7
+render: 4-18
+snapshot: 7-9
 ```
 
 ```diagram:mental-diagram kind=graph

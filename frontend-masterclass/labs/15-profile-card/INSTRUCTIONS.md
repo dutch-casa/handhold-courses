@@ -22,3 +22,4 @@ Build a `ProfileCard` component with typed props. This is your first React compo
 - Use `skills.map((skill) => <li key={skill}>{skill}</li>)` for the list.
 - The `key` should be unique per item — the skill string itself works here since skills won't repeat.
 - `readonly` on props prevents accidental mutation. This matches the course doctrine.
+- Run `npm run dev` to start a live preview. Open the URL in your browser to see your component as you build it.

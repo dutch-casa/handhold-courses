@@ -134,28 +134,31 @@ steps:
 
   # ── Module 6: React Fundamentals ───────────────────────────
   - kind: lesson
-    title: "Lesson 24: What is React?"
+    title: "Lesson 24: Your dev environment"
+    path: steps/24-your-dev-environment.md
+  - kind: lesson
+    title: "Lesson 25: What is React?"
     path: steps/24-what-is-react.md
   - kind: lesson
-    title: "Lesson 25: Components, props, and JSX"
+    title: "Lesson 26: Components, props, and JSX"
     path: steps/25-components-props-jsx.md
   - kind: lab
     title: "Lab 15: Profile card"
     path: labs/15-profile-card/
   - kind: lesson
-    title: "Lesson 26: State and events"
+    title: "Lesson 27: State and events"
     path: steps/26-state-and-events.md
   - kind: lab
     title: "Lab 16: Counter and form"
     path: labs/16-counter-form/
   - kind: lesson
-    title: "Lesson 27: Lists and conditional rendering"
+    title: "Lesson 28: Lists and conditional rendering"
     path: steps/27-lists-and-conditional-rendering.md
   - kind: lab
     title: "Lab 17: Filterable list"
     path: labs/17-filterable-list/
   - kind: lesson
-    title: "Lesson 28: Data fetching the right way"
+    title: "Lesson 29: Data fetching the right way"
     path: steps/28-data-fetching-the-right-way.md
   - kind: lab
     title: "Lab 18: Fetch and display posts"
@@ -163,19 +166,19 @@ steps:
 
   # ── Module 7: React Composition ────────────────────────────
   - kind: lesson
-    title: "Lesson 29: Composition over configuration"
+    title: "Lesson 30: Composition over configuration"
     path: steps/29-composition-over-configuration.md
   - kind: lab
     title: "Lab 19: Compound accordion"
     path: labs/19-compound-accordion/
   - kind: lesson
-    title: "Lesson 30: Context and providers"
+    title: "Lesson 31: Context and providers"
     path: steps/30-context-and-providers.md
   - kind: lab
     title: "Lab 20: Theme provider"
     path: labs/20-theme-provider/
   - kind: lesson
-    title: "Lesson 31: Custom hooks"
+    title: "Lesson 32: Custom hooks"
     path: steps/31-custom-hooks.md
   - kind: lab
     title: "Lab 21: Utility hooks"
@@ -183,31 +186,31 @@ steps:
 
   # ── Module 8: Design Engineering ───────────────────────────
   - kind: lesson
-    title: "Lesson 32: Design engineering principles"
+    title: "Lesson 33: Design engineering principles"
     path: steps/32-design-engineering-principles.md
   - kind: lesson
-    title: "Lesson 33: Animations and transitions"
+    title: "Lesson 34: Animations and transitions"
     path: steps/33-animations-and-transitions.md
   - kind: lab
     title: "Lab 22: Notification system"
     path: labs/22-notification-system/
   - kind: lesson
-    title: "Lesson 34: Motion that matters"
+    title: "Lesson 35: Motion that matters"
     path: steps/34-motion-that-matters.md
   - kind: lab
     title: "Lab 23: Animated tabs"
     path: labs/23-animated-tabs/
   - kind: lesson
-    title: "Lesson 35: Forms that work"
+    title: "Lesson 36: Forms that work"
     path: steps/34-forms-that-work.md
   - kind: lab
     title: "Lab 24: Accessible form"
     path: labs/23-accessible-form/
   - kind: lesson
-    title: "Lesson 36: Performance patterns"
+    title: "Lesson 37: Performance patterns"
     path: steps/35-performance-patterns.md
   - kind: lesson
-    title: "Lesson 37: The polished UI"
+    title: "Lesson 38: The polished UI"
     path: steps/36-the-polished-ui.md
   - kind: lab
     title: "Lab 25: Polished dashboard card"

@@ -175,6 +175,8 @@ null-render: 20
 {{pan: none}} {{zoom: 1x}} {{focus: none}}
 
 ```code:filter-code lang=tsx
+import { useState } from "react";
+
 interface Product {
   readonly id: number;
   readonly name: string;
@@ -225,9 +227,9 @@ function ProductList({ products }: { readonly products: readonly Product[] }) {
   );
 }
 ---
-filter: 15-16
-sort: 17-21
-combined: 14-21
+filter: 17-18
+sort: 19-23
+combined: 16-23
 ```
 
 # Lifting state up
@@ -243,6 +245,8 @@ combined: 14-21
 {{pan: none}} {{zoom: 1x}} {{focus: none}}
 
 ```code:lift-code lang=tsx
+import { useState } from "react";
+
 // BEFORE: search state trapped in SearchInput
 function SearchInput() {
   const [search, setSearch] = useState("");
@@ -296,8 +300,8 @@ function ItemList({ items }: { readonly items: readonly string[] }) {
   );
 }
 ---
-problem: 2-9
-lifted: 12-25
+problem: 4-11
+lifted: 14-27
 ```
 
 ```diagram:lift-diagram kind=graph

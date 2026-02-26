@@ -103,6 +103,8 @@ multiple: 19-20
 {{zoom: 1x}} {{focus: none}}
 
 ```code:snapshot-code lang=tsx
+import { useState } from "react";
+
 function Counter() {
   const [count, setCount] = useState(0);
 
@@ -130,9 +132,9 @@ function Counter() {
   );
 }
 ---
-snapshot-render: 4-10
-triple: 6-8
-functional: 13-17
+snapshot-render: 6-12
+triple: 8-10
+functional: 15-19
 ```
 
 ```diagram:snapshot-diagram kind=graph
@@ -169,6 +171,8 @@ SetState2 -> Render2
 {{pan: none}} {{zoom: 1x}} {{focus: none}}
 
 ```code:events-code lang=tsx
+import { useState } from "react";
+
 function EventExamples() {
   const [count, setCount] = useState(0);
 
@@ -219,10 +223,10 @@ function LoginForm() {
   );
 }
 ---
-click: 5-7
-inline: 12
-event-obj: 21-23
-submit: 33-36
+click: 7-9
+inline: 14
+event-obj: 23-25
+submit: 35-38
 ```
 
 # Controlled inputs
@@ -240,6 +244,8 @@ submit: 33-36
 {{pan: none}} {{zoom: 1x}} {{focus: none}}
 
 ```code:controlled-code lang=tsx
+import { useRef, useState } from "react";
+
 // Controlled: React owns the value
 function SearchBar() {
   const [text, setText] = useState("");
@@ -287,9 +293,9 @@ function NoteEditor() {
   );
 }
 ---
-controlled: 2-14
-uncontrolled: 18-22
-textarea: 25-42
+controlled: 4-16
+uncontrolled: 20-24
+textarea: 27-44
 ```
 
 # Derived state
@@ -307,6 +313,8 @@ textarea: 25-42
 {{pan: none}} {{zoom: 1x}} {{focus: none}}
 
 ```code:derived-code lang=tsx
+import { useState } from "react";
+
 // BAD: duplicated state
 function TodoListBad() {
   const [items, setItems] = useState<string[]>([]);
@@ -350,9 +358,9 @@ function Cart({ items }: { readonly items: readonly CartItem[] }) {
   );
 }
 ---
-bad: 2-10
-good: 14-27
-complex: 30-40
+bad: 4-12
+good: 16-29
+complex: 32-42
 ```
 
 # Batched updates
@@ -370,6 +378,8 @@ complex: 30-40
 {{zoom: 1x}} {{focus: none}}
 
 ```code:batch-code lang=tsx
+import { useState } from "react";
+
 function Profile() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -419,7 +429,7 @@ function TodoApp() {
   return <p>{todos.length} todos</p>;
 }
 ---
-batched: 7-11
-object: 18-27
-immutable: 35-44
+batched: 9-13
+object: 20-29
+immutable: 37-46
 ```
