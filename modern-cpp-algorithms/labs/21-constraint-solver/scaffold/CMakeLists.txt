@@ -10,5 +10,6 @@ FetchContent_MakeAvailable(googletest)
 
 add_executable(tests test/test.cpp src/solution.cpp)
 target_link_libraries(tests GTest::gtest_main)
+enable_testing()
 include(GoogleTest)
 gtest_discover_tests(tests)

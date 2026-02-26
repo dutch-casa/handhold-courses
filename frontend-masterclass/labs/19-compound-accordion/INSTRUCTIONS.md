@@ -22,3 +22,4 @@ Build a compound `Accordion` component. Parts share state through context. Only 
 - The toggle function: `setOpenId(prev => prev === id ? null : id)`.
 - No boolean props on any component. The compound pattern replaces them.
 - Each part needs the item `id` to know which item it belongs to.
+- Run `npm run dev` to start a live preview. Open the URL in your browser to see your component as you build it.

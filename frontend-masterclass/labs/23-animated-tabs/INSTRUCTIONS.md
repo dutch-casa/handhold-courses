@@ -23,3 +23,4 @@ Build a compound tab component with Framer Motion. The tab indicator glides betw
 - `Children.toArray(children).find(...)` + `isValidElement` to locate the active panel.
 - Variant functions receive the `custom` value: `(d: number) => ({ x: d * 80 })`.
 - `AnimatePresence initial={false}` skips the enter animation on first render.
+- Run `npm run dev` to start a live preview. Open the URL in your browser to see your component as you build it.

@@ -4,7 +4,7 @@
 
 std::vector<std::string> split_lines(std::string_view text) {
     std::vector<std::string> result;
-    std::istringstream stream(std::string(text));
+    std::istringstream stream{std::string(text)};
     std::string line;
     while (std::getline(stream, line)) {
         if (!line.empty()) {

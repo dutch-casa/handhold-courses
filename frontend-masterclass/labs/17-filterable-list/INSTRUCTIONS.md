@@ -37,3 +37,4 @@ const ITEMS: readonly Item[] = [
 - For date sorting: `new Date(a.date).getTime() - new Date(b.date).getTime()`.
 - For unique categories: `[...new Set(ITEMS.map(i => i.category))]`.
 - The filter chain is: text filter → category filter → sort.
+- Run `npm run dev` to start a live preview. Open the URL in your browser to see your component as you build it.

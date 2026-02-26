@@ -21,3 +21,4 @@ Build two components that use `useState` and event handlers.
 - `e.preventDefault()` in `onSubmit` stops the page from reloading.
 - For validation, use a `status` state: `"idle" | "error" | "success"`.
 - The character count is `text.length` — no `useState` needed for it.
+- Run `npm run dev` to start a live preview. Open the URL in your browser to see your component as you build it.

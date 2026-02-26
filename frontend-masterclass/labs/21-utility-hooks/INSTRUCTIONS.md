@@ -30,3 +30,4 @@ Build three custom hooks: `useLocalStorage`, `useMediaQuery`, and `useDebounce`.
 - `useEffect` cleanup runs before the next effect and on unmount.
 - `JSON.parse` can throw — wrap in try/catch.
 - `matchMedia` returns a `MediaQueryList` with `.matches` and `addEventListener("change", ...)`.
+- Run `npm run dev` to start a live preview. Open the URL in your browser to see your component as you build it.

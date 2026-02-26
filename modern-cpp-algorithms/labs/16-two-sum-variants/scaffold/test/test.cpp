@@ -9,7 +9,7 @@ TEST(TwoSumSorted, BasicCase) {
 }
 
 TEST(TwoSumSorted, NegativeNumbers) {
-    auto [a, b] = two_sum_sorted({-3, -1, 0, 2, 4}, 1);
+    auto [a, b] = two_sum_sorted({-3, -1, 0, 4, 7}, 3);
     EXPECT_EQ(a, 2);
     EXPECT_EQ(b, 4);
 }

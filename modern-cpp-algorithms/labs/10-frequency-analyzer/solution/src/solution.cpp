@@ -12,7 +12,7 @@ std::map<char, int> char_freq(std::string_view text) {
 
 std::map<std::string, int> word_freq(std::string_view text) {
     std::map<std::string, int> freq;
-    std::istringstream stream(std::string(text));
+    std::istringstream stream{std::string(text)};
     std::string word;
     while (stream >> word) {
         ++freq[word];
@@ -22,7 +22,7 @@ std::map<std::string, int> word_freq(std::string_view text) {
 
 std::map<std::string, int> bigram_freq(std::string_view text) {
     std::map<std::string, int> freq;
-    std::istringstream stream(std::string(text));
+    std::istringstream stream{std::string(text)};
     std::vector<std::string> words;
     std::string word;
     while (stream >> word) {

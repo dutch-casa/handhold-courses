@@ -22,3 +22,4 @@ Use React Query to fetch a list of posts, display them, and navigate to post det
 - The fetch function: `() => fetch(url).then(res => res.json())`.
 - `isPending` replaces the old `isLoading` in React Query v5.
 - Check `isError` before rendering data — TypeScript narrows the type.
+- Run `npm run dev` to start a live preview. Open the URL in your browser to see your component as you build it.

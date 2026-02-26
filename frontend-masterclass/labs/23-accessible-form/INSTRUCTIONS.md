@@ -24,3 +24,4 @@ Build a registration form that prevents iOS zoom, announces errors, validates on
 - `aria-describedby` links to the error message's `id`.
 - `fieldset[disabled]` disables all children — no need to disable each input.
 - Password strength: `value.length >= 8`, `/[A-Z]/.test(value)`, `/\d/.test(value)`.
+- Run `npm run dev` to start a live preview. Open the URL in your browser to see your component as you build it.

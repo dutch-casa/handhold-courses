@@ -22,3 +22,4 @@ Build an animated notification component that enters, stacks, auto-dismisses, an
 - Auto-dismiss cleanup: `return () => clearTimeout(timer)`.
 - Stack state: `useState<Array<{ id: number; message: string }>>([])`.
 - Use `Date.now()` or a counter for unique notification IDs.
+- Run `npm run dev` to start a live preview. Open the URL in your browser to see your component as you build it.

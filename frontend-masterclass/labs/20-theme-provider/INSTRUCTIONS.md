@@ -20,3 +20,4 @@ Build a theme system using the provider pattern. Components read and toggle the 
 - `window.matchMedia("(prefers-color-scheme: dark)").matches` returns a boolean.
 - For persistence: `localStorage.setItem("theme", newTheme)` inside the toggle.
 - `use(ThemeCtx)` is React 19's replacement for `useContext(ThemeCtx)`.
+- Run `npm run dev` to start a live preview. Open the URL in your browser to see your component as you build it.

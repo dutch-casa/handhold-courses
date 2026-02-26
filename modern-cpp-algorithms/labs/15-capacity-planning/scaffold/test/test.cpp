@@ -6,7 +6,7 @@ TEST(CanShip, FitsInOne) {
 }
 
 TEST(CanShip, NeedsTwoTrucks) {
-    EXPECT_TRUE(can_ship({1, 2, 3, 4, 5}, 2, 8));
+    EXPECT_TRUE(can_ship({1, 2, 3, 4, 5}, 2, 9));
 }
 
 TEST(CanShip, CapacityTooSmall) {
