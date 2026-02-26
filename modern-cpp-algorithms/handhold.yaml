@@ -1,0 +1,302 @@
+title: "Modern C++ and Algorithms: Zero to Interview Ready"
+description: "Master C++ from first principles through interview-grade algorithm fluency. Covers C++17/20/23, the standard library in depth, every major algorithm pattern, and principled OOP design. Rich animated visualizations of memory layout, data structure internals, and algorithm execution traces."
+tags:
+  - cpp
+  - algorithms
+  - data-structures
+  - interview-prep
+  - modern-cpp
+  - std-lib
+
+steps:
+  # ── Module 1: Getting Started ──────────────────────────────
+  - kind: lesson
+    title: "Lesson 1: Your first C++ program"
+    path: steps/01-first-program.md
+  - kind: lab
+    title: "Lab 1: Hello, Handhold"
+    path: labs/01-hello-lab/
+  - kind: lesson
+    title: "Lesson 2: Testing from day one"
+    path: steps/02-testing.md
+  - kind: lab
+    title: "Lab 2: Test-driven add"
+    path: labs/02-test-driven-add/
+
+  # ── Module 2: C++ Foundations ───────────────────────────────
+  - kind: lesson
+    title: "Lesson 3: Types and variables"
+    path: steps/03-types.md
+  - kind: lab
+    title: "Lab 3: Type explorer"
+    path: labs/03-type-explorer/
+  - kind: lesson
+    title: "Lesson 4: References and the stack"
+    path: steps/04-references.md
+  - kind: lab
+    title: "Lab 4: Swap without temporaries"
+    path: labs/04-swap/
+  - kind: lesson
+    title: "Lesson 5: Pointers and the heap"
+    path: steps/05-pointers.md
+  - kind: lab
+    title: "Lab 5: Manual memory"
+    path: labs/05-manual-memory/
+  - kind: lesson
+    title: "Lesson 6: Smart pointers and RAII"
+    path: steps/06-smart-pointers.md
+  - kind: lab
+    title: "Lab 6: Smart array"
+    path: labs/06-smart-array/
+  - kind: lesson
+    title: "Lesson 7: Strings, string_view, and I/O"
+    path: steps/07-strings.md
+  - kind: lab
+    title: "Lab 7: Word counter"
+    path: labs/07-word-counter/
+
+  # ── Module 3: The Standard Library ─────────────────────────
+  - kind: lesson
+    title: "Lesson 8: Vectors and arrays"
+    path: steps/08-vectors.md
+  - kind: lab
+    title: "Lab 8: Rolling statistics"
+    path: labs/08-rolling-stats/
+  - kind: lesson
+    title: "Lesson 9: Deques, lists, and stacks"
+    path: steps/09-deques-lists.md
+  - kind: lab
+    title: "Lab 9: Bracket matcher"
+    path: labs/09-bracket-matcher/
+  - kind: lesson
+    title: "Lesson 10: Maps and sets"
+    path: steps/10-maps-sets.md
+  - kind: lab
+    title: "Lab 10: Frequency analyzer"
+    path: labs/10-frequency-analyzer/
+  - kind: lesson
+    title: "Lesson 11: Pairs, tuples, and algebraic types"
+    path: steps/11-algebraic-types.md
+  - kind: lab
+    title: "Lab 11: Safe config parser"
+    path: labs/11-config-parser/
+  - kind: lesson
+    title: "Lesson 12: Algorithms and lambdas"
+    path: steps/12-algorithms.md
+  - kind: lab
+    title: "Lab 12: Pipeline processor"
+    path: labs/12-pipeline/
+  - kind: lesson
+    title: "Lesson 13: Ranges and views"
+    path: steps/13-ranges.md
+  - kind: lab
+    title: "Lab 13: Log analyzer"
+    path: labs/13-log-analyzer/
+
+  # ── Module 4: Binary Search ────────────────────────────────
+  - kind: lesson
+    title: "Lesson 14: The binary search pattern"
+    path: steps/14-binary-search.md
+  - kind: lab
+    title: "Lab 14: First true"
+    path: labs/14-first-true/
+  - kind: lesson
+    title: "Lesson 15: Binary search variations"
+    path: steps/15-binary-search-variations.md
+  - kind: lab
+    title: "Lab 15: Capacity planning"
+    path: labs/15-capacity-planning/
+
+  # ── Module 5: Two Pointers ────────────────────────────────
+  - kind: lesson
+    title: "Lesson 16: Two pointers pattern"
+    path: steps/16-two-pointers.md
+  - kind: lab
+    title: "Lab 16: Two-sum variants"
+    path: labs/16-two-sum-variants/
+  - kind: lesson
+    title: "Lesson 17: Sliding window"
+    path: steps/17-sliding-window.md
+  - kind: lab
+    title: "Lab 17: Substring search"
+    path: labs/17-substring-search/
+
+  # ── Module 6: Depth First Search ──────────────────────────
+  - kind: lesson
+    title: "Lesson 18: Tree DFS"
+    path: steps/18-tree-dfs.md
+  - kind: lab
+    title: "Lab 18: Tree operations"
+    path: labs/18-tree-operations/
+  - kind: lesson
+    title: "Lesson 19: Graph DFS"
+    path: steps/19-graph-dfs.md
+  - kind: lab
+    title: "Lab 19: Islands and components"
+    path: labs/19-islands/
+
+  # ── Module 7: Backtracking ────────────────────────────────
+  - kind: lesson
+    title: "Lesson 20: The backtracking template"
+    path: steps/20-backtracking.md
+  - kind: lab
+    title: "Lab 20: Combinations and permutations"
+    path: labs/20-combinations/
+  - kind: lesson
+    title: "Lesson 21: Backtracking applications"
+    path: steps/21-backtracking-apps.md
+  - kind: lab
+    title: "Lab 21: Constraint solver"
+    path: labs/21-constraint-solver/
+
+  # ── Module 8: Breadth First Search ────────────────────────
+  - kind: lesson
+    title: "Lesson 22: BFS pattern"
+    path: steps/22-bfs.md
+  - kind: lab
+    title: "Lab 22: Shortest paths"
+    path: labs/22-shortest-paths/
+  - kind: lesson
+    title: "Lesson 23: Advanced BFS"
+    path: steps/23-advanced-bfs.md
+  - kind: lab
+    title: "Lab 23: State space search"
+    path: labs/23-state-space-search/
+
+  # ── Module 9: Graph ───────────────────────────────────────
+  - kind: lesson
+    title: "Lesson 24: Weighted graphs and Dijkstra"
+    path: steps/24-dijkstra.md
+  - kind: lab
+    title: "Lab 24: Network shortest path"
+    path: labs/24-network-shortest-path/
+  - kind: lesson
+    title: "Lesson 25: Minimum spanning trees"
+    path: steps/25-mst.md
+  - kind: lab
+    title: "Lab 25: Network design"
+    path: labs/25-network-design/
+  - kind: lesson
+    title: "Lesson 26: Advanced graph algorithms"
+    path: steps/26-advanced-graph.md
+  - kind: lab
+    title: "Lab 26: Graph theory practice"
+    path: labs/26-graph-theory/
+
+  # ── Module 10: Priority Queue / Heap ──────────────────────
+  - kind: lesson
+    title: "Lesson 27: Heap internals"
+    path: steps/27-heap-internals.md
+  - kind: lab
+    title: "Lab 27: Heap from scratch"
+    path: labs/27-heap-from-scratch/
+  - kind: lesson
+    title: "Lesson 28: Heap applications"
+    path: steps/28-heap-apps.md
+  - kind: lab
+    title: "Lab 28: Real-time median"
+    path: labs/28-real-time-median/
+
+  # ── Module 11: Dynamic Programming ────────────────────────
+  - kind: lesson
+    title: "Lesson 29: DP foundations"
+    path: steps/29-dp-foundations.md
+  - kind: lab
+    title: "Lab 29: Classic 1D DP"
+    path: labs/29-classic-1d-dp/
+  - kind: lesson
+    title: "Lesson 30: 2D DP and grid problems"
+    path: steps/30-2d-dp.md
+  - kind: lab
+    title: "Lab 30: String DP"
+    path: labs/30-string-dp/
+  - kind: lesson
+    title: "Lesson 31: Advanced DP patterns"
+    path: steps/31-advanced-dp.md
+  - kind: lab
+    title: "Lab 31: Optimization problems"
+    path: labs/31-optimization-problems/
+
+  # ── Module 12: Advanced Data Structures ───────────────────
+  - kind: lesson
+    title: "Lesson 32: Trie"
+    path: steps/32-trie.md
+  - kind: lab
+    title: "Lab 32: Autocomplete engine"
+    path: labs/32-autocomplete/
+  - kind: lesson
+    title: "Lesson 33: LRU cache"
+    path: steps/33-lru-cache.md
+  - kind: lab
+    title: "Lab 33: LRU cache"
+    path: labs/33-lru-cache/
+  - kind: lesson
+    title: "Lesson 34: Segment trees and Fenwick trees"
+    path: steps/34-segment-trees.md
+  - kind: lab
+    title: "Lab 34: Range query engine"
+    path: labs/34-range-query/
+
+  # ── Module 13: Miscellaneous Patterns ─────────────────────
+  - kind: lesson
+    title: "Lesson 35: Intervals"
+    path: steps/35-intervals.md
+  - kind: lab
+    title: "Lab 35: Interval scheduler"
+    path: labs/35-interval-scheduler/
+  - kind: lesson
+    title: "Lesson 36: Monotonic stack"
+    path: steps/36-monotonic-stack.md
+  - kind: lab
+    title: "Lab 36: Stack problems"
+    path: labs/36-stack-problems/
+  - kind: lesson
+    title: "Lesson 37: Divide and conquer"
+    path: steps/37-divide-and-conquer.md
+  - kind: lab
+    title: "Lab 37: Divide and conquer"
+    path: labs/37-divide-and-conquer/
+  - kind: lesson
+    title: "Lesson 38: Greedy algorithms"
+    path: steps/38-greedy.md
+  - kind: lab
+    title: "Lab 38: Greedy problems"
+    path: labs/38-greedy-problems/
+  - kind: lesson
+    title: "Lesson 39: Math and bit manipulation"
+    path: steps/39-math-and-bits.md
+  - kind: lab
+    title: "Lab 39: Number theory"
+    path: labs/39-number-theory/
+  - kind: lesson
+    title: "Lesson 40: Matrix problems"
+    path: steps/40-matrix-problems.md
+  - kind: lab
+    title: "Lab 40: Matrix operations"
+    path: labs/40-matrix-operations/
+
+  # ── Module 14: OOP Design ─────────────────────────────────
+  - kind: lesson
+    title: "Lesson 41: Classes and deep modules"
+    path: steps/41-classes.md
+  - kind: lab
+    title: "Lab 41: Deep buffer"
+    path: labs/41-deep-buffer/
+  - kind: lesson
+    title: "Lesson 42: Inheritance and composition"
+    path: steps/42-inheritance.md
+  - kind: lab
+    title: "Lab 42: Shape renderer"
+    path: labs/42-shape-renderer/
+  - kind: lesson
+    title: "Lesson 43: Templates and concepts"
+    path: steps/43-templates.md
+  - kind: lab
+    title: "Lab 43: Generic container"
+    path: labs/43-generic-container/
+  - kind: lesson
+    title: "Lesson 44: Design patterns in modern C++"
+    path: steps/44-design-patterns.md
+  - kind: lab
+    title: "Lab 44: Event system"
+    path: labs/44-event-system/

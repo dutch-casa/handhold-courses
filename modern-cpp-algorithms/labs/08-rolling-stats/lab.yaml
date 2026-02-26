@@ -1,0 +1,7 @@
+workspace: fresh
+test: bash tap_runner.sh build
+setup:
+  - cmake -B build -DCMAKE_CXX_STANDARD=23
+open:
+  - src/solution.h
+  - src/solution.cpp
