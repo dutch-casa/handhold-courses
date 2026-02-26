@@ -22,3 +22,4 @@ Build a dashboard card that demonstrates every design engineering technique from
 - Hover lift: combine shadow increase with `translateY(-2px)`.
 - Dark mode borders: `box-shadow: 0 0 0 1px rgba(255,255,255,0.08)`.
 - Skeleton pulse: `@keyframes pulse { 0%, 100% { opacity: 0.4 } 50% { opacity: 0.7 } }`.
+- Run `npm run dev` to start a live preview. Open the URL in your browser to see your component as you build it.

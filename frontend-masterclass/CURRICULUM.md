@@ -242,7 +242,15 @@ Types aren't annotations. They're guarantees.
 
 Components are functions. State is data. The UI is a function of state.
 
-### Lesson 24: "What is React?"
+### Lesson 24: "Your dev environment"
+- **Steps**: What Node.js is (V8 outside the browser), npm (package registry + CLI), package.json anatomy (dependencies, devDependencies, scripts), npm install and the lockfile, Vite (dev server + bundler + HMR), scaffolding a React+TS project with `npm create vite@latest`, `npm run dev` workflow
+- **Aha**: The browser doesn't understand .tsx files. Vite compiles your code, serves it to the browser, and refreshes instantly when you save. One command scaffolds a complete project. Two more and you're running it.
+- **Viz**: diagram(Node.js runtime), code(package.json), diagram(Vite pipeline), code(scaffold commands)
+- **Scenes**: ~5 steps
+- **Note**: All React labs from this point forward include Vite. Students run `npm run dev` to preview their work.
+
+### Lesson 25: "What is React?"
+
 - **Steps**: The problem (imperative DOM is painful at scale), declarative UI (describe what, not how), components as functions, JSX (it's just function calls), the virtual DOM (diff and patch), React's mental model (UI = f(state))
 - **Aha**: A React component is a function that takes data and returns a description of UI. When data changes, React calls the function again, compares the old description to the new one, and only updates what's different. That's the whole idea.
 - **Viz**: diagram(imperative vs declarative), split(vanilla JS vs React), code(JSX → createElement), diagram(virtual DOM diff)

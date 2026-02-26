@@ -1,5 +1,9 @@
 workspace: fresh
+setup:
+  - npm install
 test: node test.js
+start:
+  - npm run dev
 open:
   - src/Card.tsx
   - src/card.css

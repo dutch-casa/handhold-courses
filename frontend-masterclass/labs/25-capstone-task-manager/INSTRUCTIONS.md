@@ -35,3 +35,4 @@ The mock API is already scaffolded in `api.ts`. It uses an in-memory array with 
 - Dark mode: use CSS custom properties with `@media (prefers-color-scheme: dark)`.
 - Skeleton: match the task item layout (checkbox placeholder + text bar + button placeholder).
 - For 10 tests to pass, every piece matters. This lab validates the full stack.
+- Run `npm run dev` to start a live preview. Open the URL in your browser to see your component as you build it.
