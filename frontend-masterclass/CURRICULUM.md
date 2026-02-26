@@ -256,7 +256,7 @@ Components are functions. State is data. The UI is a function of state.
 - **Viz**: diagram(imperative vs declarative), split(vanilla JS vs React), code(JSX → createElement), diagram(virtual DOM diff)
 - **Scenes**: ~7 steps
 
-### Lesson 25: "Components, props, and JSX"
+### Lesson 26: "Components, props, and JSX"
 - **Steps**: Function components (the only kind that matters), returning JSX, props (data flowing down), destructuring props, TypeScript + props (interface), children prop, composition (nesting components), key prop and lists, fragments
 - **Aha**: Props flow down. Always. A parent passes data to a child through props. The child never reaches up to grab data from the parent. This one-way flow makes React predictable — you can always trace where data comes from.
 - **Viz**: diagram(component tree with prop arrows), code(component examples), preview(rendered components), split
@@ -266,7 +266,7 @@ Components are functions. State is data. The UI is a function of state.
 - Build a ProfileCard component that takes name, avatar URL, bio, and list of skills as props. Render it with TypeScript types.
 - 5 tests: component renders name, renders avatar with alt text, renders bio, renders all skills as list items, props are typed with interface
 
-### Lesson 26: "State and events"
+### Lesson 27: "State and events"
 - **Steps**: useState (declaring state), updating state (setter function), state is immutable (new values, not mutations), event handlers (onClick, onChange, onSubmit), controlled inputs (value + onChange), derived state (computing values from state), batched updates
 - **Aha**: State is a snapshot. When you call setState, you're not changing the current value — you're requesting a new render with a new value. The old render still sees the old value. This is why React is predictable: each render is a snapshot of state at that point in time.
 - **Viz**: diagram(render cycle: state → render → DOM → event → setState → render), code, preview(interactive counter), split
@@ -276,7 +276,7 @@ Components are functions. State is data. The UI is a function of state.
 - Build: a counter with increment/decrement/reset, a controlled text input that shows character count, a form with name+email that validates on submit
 - 6 tests: counter increments, counter decrements, counter resets, input shows char count, form validates empty fields, form shows success on valid submit
 
-### Lesson 27: "Lists and conditional rendering"
+### Lesson 28: "Lists and conditional rendering"
 - **Steps**: Rendering arrays with map(), the key prop (why it matters, what to use), conditional rendering (ternary, &&, early return), conditional styles, filtering and sorting in the render, the "lifting state up" pattern (shared state between siblings)
 - **Aha**: The key prop isn't just "something React wants." It's how React knows which item is which between renders. Without a stable key, React can't tell if an item was added, removed, or moved — so it destroys and recreates everything. Keys are identity.
 - **Viz**: data(virtual DOM diff with keys vs without), code, preview(filtered list), split
@@ -286,7 +286,7 @@ Components are functions. State is data. The UI is a function of state.
 - Build a searchable, filterable list of items. Text filter, category dropdown filter, sort by name or date. All filters work together.
 - 5 tests: renders all items initially, text filter narrows results, category filter works, sort changes order, combined filters work
 
-### Lesson 28: "Data fetching the right way"
+### Lesson 29: "Data fetching the right way"
 - **Steps**: Why NOT useEffect for fetching (race conditions, no caching, no dedup, cleanup nightmare), React Query / TanStack Query (the right tool), useQuery (fetch + cache + loading + error in one hook), query keys (cache identity), stale time and refetching, mutations (useMutation), optimistic updates
 - **Aha**: useEffect for data fetching is an anti-pattern. It gives you loading and error state, but no caching, no deduplication, no background refetch, no retry, no optimistic updates. React Query gives you all of that in one hook. The question isn't "should I use it?" — it's "why would you not?"
 - **Viz**: split(useEffect mess vs React Query clean), diagram(React Query cache flow), code, preview
@@ -302,7 +302,7 @@ Components are functions. State is data. The UI is a function of state.
 
 Stop passing booleans. Start composing components.
 
-### Lesson 29: "Composition over configuration"
+### Lesson 30: "Composition over configuration"
 - **Steps**: The boolean prop trap (6 booleans = 64 states), compound components (Accordion.Item, Accordion.Trigger, Accordion.Content), children as composition, why this is better (each variant is explicit, no impossible states), the provider pattern for shared state
 - **Aha**: Six booleans. Two to the sixth power. Sixty-four possible states. Most of them are nonsensical. Compound components eliminate the combinatorial explosion by making each variant an explicit composition of parts. No booleans. No impossible states. Just Lego bricks.
 - **Viz**: code(boolean hell), diagram(state explosion), code(compound solution), split(before/after)
@@ -312,7 +312,7 @@ Stop passing booleans. Start composing components.
 - Build a compound Accordion component: Accordion, Accordion.Item, Accordion.Trigger, Accordion.Content. Only one item open at a time. Animated open/close.
 - 6 tests: renders multiple items, clicking trigger opens content, clicking open trigger closes it, only one item open at a time, content animates, component uses compound pattern (no boolean props)
 
-### Lesson 30: "Context and providers"
+### Lesson 31: "Context and providers"
 - **Steps**: The prop drilling problem, React Context (createContext, Provider, useContext → use() in React 19), the provider pattern (state + actions + meta), decoupling implementation (the provider hides HOW state is managed), when to use context vs props (proximity principle), context performance (avoiding unnecessary re-renders)
 - **Aha**: A provider component owns the state. The parts read from context. Swap the provider, keep the parts. The provider is a wall between "how state is managed" and "how UI renders." Neither side knows about the other's internals. That's composition.
 - **Viz**: diagram(prop drilling vs context), code(provider pattern), split(coupled vs decoupled)
@@ -322,7 +322,7 @@ Stop passing booleans. Start composing components.
 - Build a theme provider: ThemeProvider wraps the app, useTheme hook reads current theme and toggle function, components style themselves based on theme, supports system preference detection
 - 5 tests: theme context provides current theme, toggle switches themes, components read theme, system preference is respected, theme persists (localStorage)
 
-### Lesson 31: "Custom hooks"
+### Lesson 32: "Custom hooks"
 - **Steps**: What a custom hook is (just a function that uses hooks), extracting shared logic, rules of hooks (why they exist), useLocalStorage, useMediaQuery, useDebounce, composing hooks (hooks that use other hooks), testing hooks
 - **Aha**: A custom hook is a function with superpowers. It can use state, effects, context — anything a component can. But it returns data, not UI. This is how you share stateful logic between components without changing the component tree.
 - **Viz**: code(hook extraction from component), split(component with duplicated logic, after hook extraction), diagram(hook composition)
@@ -338,13 +338,13 @@ Stop passing booleans. Start composing components.
 
 The difference between "it works" and "it's polished."
 
-### Lesson 32: "Design engineering principles"
+### Lesson 33: "Design engineering principles"
 - **Steps**: What design engineering is (the intersection of design and code), no layout shift (hardcoded dimensions, tabular-nums), touch-first design (44px targets, no hover-only), keyboard navigation (tab order, focus-visible, scroll-into-view), accessibility by default (aria labels, reduced motion, screen reader testing), the z-index scale (isolation: isolate)
 - **Aha**: A polished UI doesn't just look good. It's stable (no layout shift), inclusive (keyboard and screen reader), responsive (touch-first, hover-enhanced), and fast (no unnecessary animation). Polish is not decoration — it's engineering.
 - **Viz**: preview(layout shift demo), preview(touch target demo), code(accessibility patterns), diagram(z-index layers)
 - **Scenes**: ~8 steps
 
-### Lesson 33: "Animations and transitions"
+### Lesson 34: "Animations and transitions"
 - **Steps**: CSS transitions (property, duration, easing), when to animate (and when not to), easing functions (ease-out for enter, ease-in-out for move, spring for playful), transform and opacity (the only properties to animate), enter/exit animations (no height/width animation), keyframes for complex sequences, prefers-reduced-motion (non-negotiable), the 400ms rule
 - **Aha**: Animate transform and opacity. Nothing else. Width, height, top, left — these trigger layout recalculation on every frame. Transform and opacity are composited on the GPU. The difference isn't subtle — it's the difference between 60fps and 15fps.
 - **Viz**: preview(smooth vs janky animation), split(layout animation vs transform animation), code(transition patterns), diagram(render pipeline: layout → paint → composite)
@@ -354,7 +354,17 @@ The difference between "it works" and "it's polished."
 - Build an animated notification component: enters from top-right with slide + fade, auto-dismisses after 5s, manual dismiss with animation, stacks multiple notifications, respects reduced motion
 - 6 tests: notification appears on trigger, animates in, auto-dismisses, manual dismiss works, multiple stack, reduced motion disables animation
 
-### Lesson 34: "Forms that work"
+### Lesson 35: "Motion that matters"
+- **Steps**: Physics-based animation, spring dynamics, direction-aware transitions, AnimatePresence for enter/exit, layout animations, stagger delays, gesture-driven animation, orchestrating multi-element motion
+- **Aha**: Motion communicates relationships. A panel sliding from the right tells you it's new. Sliding back tells you it's going away. Direction, timing, and easing give your interface a spatial language users understand without thinking.
+- **Viz**: preview(spring animation), code(Framer Motion patterns), split(direction-aware variants), preview(stagger demo)
+- **Scenes**: ~7 steps
+
+### Lab 23: "Animated tabs"
+- Build a compound tab component with Framer Motion. Tab indicator glides between tabs using layoutId. Content slides in from the direction you clicked. Reduced motion disables all animation.
+- 6 tests: renders tabs, clicking tab changes content, indicator animates between tabs, content slides directionally, compound pattern used, reduced motion disables animation
+
+### Lesson 36: "Forms that work"
 - **Steps**: Input sizing (16px minimum to prevent iOS zoom), label association (for + id, or wrapping), error states (aria-invalid, aria-describedby, inline messages), submit with Enter and Cmd+Enter, loading states (disable button, show spinner), validation patterns (on blur, on submit, never on every keystroke), accessible error announcements (aria-live)
 - **Aha**: A form that doesn't zoom on iOS, doesn't trap keyboard users, announces errors to screen readers, and validates at the right moment — that's not extra work. That's the baseline. Anything less is a broken form.
 - **Viz**: preview(form with all states), code(accessible form pattern), split(broken form vs correct form), diagram(validation flow)
@@ -364,13 +374,13 @@ The difference between "it works" and "it's polished."
 - Build a registration form: name, email, password with strength meter, confirm password. Validate on blur, announce errors, prevent iOS zoom, submit with keyboard, show loading state
 - 7 tests: inputs are 16px+, labels are associated, errors use aria-invalid, error messages use aria-describedby, form submits with Enter, password strength updates, loading state disables form
 
-### Lesson 35: "Performance patterns"
+### Lesson 37: "Performance patterns"
 - **Steps**: Why performance matters (user perception thresholds), memoization (React.memo, useMemo, useCallback — and when NOT to), lazy loading (React.lazy + Suspense), code splitting (dynamic imports), virtualization (rendering only visible items), optimistic updates (update UI before server confirms), the measuring mindset (React DevTools profiler, Lighthouse)
 - **Aha**: The fastest code is code that doesn't run. Virtualization renders 20 items instead of 10,000. Lazy loading loads the code when it's needed, not at startup. Memoization skips re-rendering when props haven't changed. The common thread: do less work.
 - **Viz**: diagram(rendering 10k items vs virtualized), code(memo patterns), split(before/after profiler), chart(performance metrics)
 - **Scenes**: ~8 steps
 
-### Lesson 36: "The polished UI"
+### Lesson 38: "The polished UI"
 - **Steps**: Shadows (layered, not single box-shadow), gradients (subtle, purposeful), micro-interactions (button press, input focus, toggle switch), dark mode (not just inverted colors — different shadow/border treatment), scrollbar styling (only in small containers), font rendering (antialiased, optical sizing), the "feel" of great UI (everything has feedback, nothing is dead)
 - **Aha**: The difference between "fine" and "great" is 50 details, each taking 5 minutes. Layered shadows that look like real depth. A button that presses in 2px on click. An input that glows on focus. Dark mode where shadows become glows. None of these are hard. They're just intentional.
 - **Viz**: preview(polished component gallery), split(flat vs polished), code(shadow layers, micro-interactions)
@@ -396,9 +406,9 @@ The difference between "it works" and "it's polished."
 | 3. Tailwind CSS | 3 | 2 | Utility-first, core, v4 |
 | 4. JavaScript & DOM | 3 | 2 | Fundamentals, events, async |
 | 5. TypeScript | 3 | 1 | Types, narrowing, advanced |
-| 6. React Fundamentals | 5 | 4 | Components, state, data fetching |
+| 6. React Fundamentals | 6 | 4 | Dev environment, components, state, data fetching |
 | 7. React Composition | 3 | 3 | Compound components, context, hooks |
-| 8. Design Engineering | 5 | 4 | Polish, animation, a11y, performance |
-| **Total** | **36** | **25** | |
+| 8. Design Engineering | 6 | 4 | Polish, animation, motion, a11y, performance |
+| **Total** | **38** | **26** | |
 
-61 total steps (lessons + labs). A complete journey from "what is a tag" to "polished React application."
+64 total steps (lessons + labs). A complete journey from "what is a tag" to "polished React application."
