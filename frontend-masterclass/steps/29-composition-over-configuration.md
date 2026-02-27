@@ -209,7 +209,7 @@ Accordion.Content = Content;
 ---
 provider: 17-27
 item: 29-47
-assembly: 50-52
+assembly: 48-50
 ```
 
 # Using compound components

@@ -56,7 +56,10 @@ fi
 # If still no tests found, report the raw output
 if [ $count -eq 0 ]; then
   echo "1..1"
-  if [ $CTEST_EXIT -eq 0 ]; then
+  if echo "$CTEST_OUTPUT" | grep -q "No tests were found"; then
+    echo "not ok 1 - no tests discovered (check CMakeLists.txt)"
+    exit 1
+  elif [ $CTEST_EXIT -eq 0 ]; then
     echo "ok 1 - all tests passed"
   else
     echo "not ok 1 - tests failed (see output below)"

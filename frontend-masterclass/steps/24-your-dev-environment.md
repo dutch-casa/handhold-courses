@@ -102,7 +102,7 @@ npm install -D tailwindcss
 ---
 install-cmd: 2
 lockfile: 5-6
-add-pkg: 8-11
+add-pkg: 8-12
 ```
 
 ```diagram:tree-diagram
@@ -213,5 +213,5 @@ npm run dev
 ---
 create: 2
 run: 5-9
-structure: 12-19
+structure: 12-20
 ```
