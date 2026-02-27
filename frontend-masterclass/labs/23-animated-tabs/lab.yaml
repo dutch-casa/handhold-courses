@@ -2,8 +2,6 @@ workspace: fresh
 setup:
   - npm install
 test: npx tsc --noEmit && node test.js
-start:
-  - npm run dev
 open:
   - src/AnimatedTabs.tsx
   - src/App.tsx

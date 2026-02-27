@@ -32,9 +32,9 @@ function useTabsContext() {
 }
 
 const panelVariants = {
-  enter: (d: number) => ({ opacity: 0, x: d * 80 }),
+  enter: (d: number) => ({ opacity: 0, x: d * 40 }),
   center: { opacity: 1, x: 0 },
-  exit: (d: number) => ({ opacity: 0, x: d * -80 }),
+  exit: (d: number) => ({ opacity: 0, x: d * -40 }),
 };
 
 function TabsRoot({
@@ -65,14 +65,12 @@ function TabsRoot({
   }, []);
 
   return (
-    <TabsContext
-      value={{ activeTab, direction, selectTab, registerTab }}
-    >
+    <TabsContext value={{ activeTab, direction, selectTab, registerTab }}>
       <MotionConfig
         transition={
           prefersReducedMotion
             ? { duration: 0 }
-            : { type: "spring", bounce: 0, duration: 0.6 }
+            : { type: "spring", bounce: 0.15, duration: 0.35 }
         }
       >
         <div className="tabs">{children}</div>
@@ -122,12 +120,14 @@ function TabContent({ children }: { readonly children: ReactNode }) {
   const { activeTab, direction } = useTabsContext();
 
   const activeChild = Children.toArray(children).find(
-    (child) => isValidElement(child) && child.props.id === activeTab,
+    (child) =>
+      isValidElement<{ readonly id: string }>(child) &&
+      child.props.id === activeTab,
   );
 
   return (
     <div className="tab-content">
-      <AnimatePresence mode="popLayout" custom={direction} initial={false}>
+      <AnimatePresence mode="wait" custom={direction} initial={false}>
         {activeChild}
       </AnimatePresence>
     </div>

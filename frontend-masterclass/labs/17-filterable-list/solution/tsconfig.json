@@ -4,6 +4,7 @@
     "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
     "target": "ES2022",
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
     "module": "ES2022",
     "moduleResolution": "bundler",
     "jsx": "react-jsx",

@@ -205,7 +205,7 @@ steps:
     path: steps/34-forms-that-work.md
   - kind: lab
     title: "Lab 24: Accessible form"
-    path: labs/23-accessible-form/
+    path: labs/24-accessible-form/
   - kind: lesson
     title: "Lesson 37: Performance patterns"
     path: steps/35-performance-patterns.md
@@ -214,7 +214,7 @@ steps:
     path: steps/36-the-polished-ui.md
   - kind: lab
     title: "Lab 25: Polished dashboard card"
-    path: labs/24-polished-card/
+    path: labs/25-polished-card/
   - kind: lab
     title: "Lab 26: Capstone — Task manager"
-    path: labs/25-capstone-task-manager/
+    path: labs/26-capstone-task-manager/
