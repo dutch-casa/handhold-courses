@@ -1,0 +1,4 @@
+workspace: scaffold
+setup:
+  - cmake -B build -DCMAKE_BUILD_TYPE=Release -S . -Wno-dev
+test: bash tap_runner.sh build

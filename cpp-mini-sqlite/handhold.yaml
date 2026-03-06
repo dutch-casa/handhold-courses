@@ -1,0 +1,109 @@
+title: "Build a Database: C++ Systems Programming"
+description: "Build a working mini-SQLite from scratch. Learn how databases store data, parse SQL, and execute queries — while mastering high-performance C++23 patterns used in production systems."
+tags:
+  - cpp
+  - systems
+  - databases
+  - performance
+  - cpp23
+
+steps:
+  # ── Part 0: Bridging ──────────────────────────────────────
+  - kind: lesson
+    title: "Lesson 0: C++ you already know"
+    path: steps/00-recap.md
+  - kind: lesson
+    title: "Lesson 1: Error handling with std::expected"
+    path: steps/01-expected.md
+  - kind: lab
+    title: "Lab 1: File reader"
+    path: labs/01-file-reader/
+
+  # ── Part 1: Storage Engine ────────────────────────────────
+  - kind: lesson
+    title: "Lesson 2: What is a database file?"
+    path: steps/02-what-is-a-database.md
+  - kind: lab
+    title: "Lab 2: Read raw page headers"
+    path: labs/02-page-headers/
+  - kind: lesson
+    title: "Lesson 3: The page abstraction"
+    path: steps/03-pages.md
+  - kind: lab
+    title: "Lab 3: PageManager — read and write"
+    path: labs/03-page-manager/
+  - kind: lab
+    title: "Lab 3b: PageManager — LRU cache"
+    path: labs/03b-page-cache/
+  - kind: lesson
+    title: "Lesson 4: Memory without fear"
+    path: steps/04-memory.md
+  - kind: lab
+    title: "Lab 4: Arena allocator"
+    path: labs/04-arena/
+  - kind: lesson
+    title: "Lesson 5: B-trees"
+    path: steps/05-btree.md
+  - kind: lab
+    title: "Lab 5: B-tree search"
+    path: labs/05-btree-search/
+  - kind: lab
+    title: "Lab 6: B-tree insertion"
+    path: labs/06-btree-insert/
+  - kind: lesson
+    title: "Lesson 6: Storing rows"
+    path: steps/06-rows.md
+  - kind: lab
+    title: "Lab 7: Encode and decode a Row"
+    path: labs/07-row-codec/
+
+  # ── Part 2: SQL Layer ─────────────────────────────────────
+  - kind: lesson
+    title: "Lesson 7: The SQL tokenizer"
+    path: steps/07-tokenizer.md
+  - kind: lab
+    title: "Lab 8: Implement the tokenizer"
+    path: labs/08-tokenizer/
+  - kind: lesson
+    title: "Lesson 8: From tokens to AST"
+    path: steps/08-parser.md
+  - kind: lab
+    title: "Lab 9: Parse CREATE TABLE and INSERT"
+    path: labs/09-parser/
+  - kind: lesson
+    title: "Lesson 9: The executor"
+    path: steps/09-executor.md
+  - kind: lab
+    title: "Lab 10: Execute SELECT *"
+    path: labs/10-select/
+  - kind: lesson
+    title: "Lesson 10: WHERE clauses"
+    path: steps/10-where.md
+  - kind: lab
+    title: "Lab 11: Execute SELECT WHERE"
+    path: labs/11-where/
+  - kind: lab
+    title: "Capstone: Mini-SQLite"
+    path: labs/12-capstone/
+
+  # ── Part 3: Making it Fast ────────────────────────────────
+  - kind: lesson
+    title: "Lesson 11: Profiling"
+    path: steps/11-profiling.md
+  - kind: lab
+    title: "Lab 12: Profile your database"
+    path: labs/13-profiling/
+  - kind: lesson
+    title: "Checkpoint A: Cache lines"
+    path: steps/12-cache-lines.md
+  - kind: lesson
+    title: "Checkpoint B: SIMD row scanning"
+    path: steps/13-simd.md
+  - kind: lesson
+    title: "Checkpoint C: Concurrent readers"
+    path: steps/14-concurrency.md
+
+  # ── Bonus ─────────────────────────────────────────────────
+  - kind: lesson
+    title: "Checkpoint D: Joins"
+    path: steps/15-joins.md
