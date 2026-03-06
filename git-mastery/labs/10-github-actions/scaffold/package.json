@@ -1,0 +1,7 @@
+{
+  "name": "ci-project",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "node test/add.test.js"
+  }
+}

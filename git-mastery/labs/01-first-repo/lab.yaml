@@ -1,0 +1,8 @@
+workspace: fresh
+test: bash test.sh
+setup:
+  - git config --global user.email "learner@handhold.io"
+  - git config --global user.name "Learner"
+  - git config --global init.defaultBranch main
+open:
+  - hello.txt

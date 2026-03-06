@@ -1,0 +1,11 @@
+workspace: fresh
+test: bash test.sh
+setup:
+  - git config --global user.email "learner@handhold.io"
+  - git config --global user.name "Learner"
+  - git config --global init.defaultBranch main
+  - git init . && echo "Hello, git!" > greeting.txt && git add greeting.txt && git commit -m "add greeting"
+  - echo "Second line" >> greeting.txt && git add . && git commit -m "update greeting"
+  - echo "config value" > config.txt && git add config.txt && git commit -m "add config"
+open:
+  - answers.txt

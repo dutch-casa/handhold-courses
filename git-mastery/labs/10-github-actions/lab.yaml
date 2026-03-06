@@ -1,0 +1,13 @@
+workspace: fresh
+test: bash test.sh
+setup:
+  - git config --global user.email "learner@handhold.io"
+  - git config --global user.name "Learner"
+  - git config --global init.defaultBranch main
+  - git init .
+  - mkdir -p src test
+  - printf 'function add(a, b) {\n  return a + b;\n}\n\nmodule.exports = { add };\n' > src/add.js
+  - printf "const assert = require('assert');\nconst { add } = require('../src/add');\nassert.strictEqual(add(2, 3), 5);\nassert.strictEqual(add(-1, 1), 0);\nassert.strictEqual(add(0, 0), 0);\nconsole.log('all tests passed');\n" > test/add.test.js
+  - "git add package.json src/ test/ && git commit -m 'chore: initial project setup'"
+open:
+  - .github/workflows/ci.yml

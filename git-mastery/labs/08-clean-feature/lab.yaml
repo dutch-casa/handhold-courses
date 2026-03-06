@@ -1,0 +1,13 @@
+workspace: fresh
+test: bash local/test.sh
+setup:
+  - git config --global user.email "learner@handhold.io"
+  - git config --global user.name "Learner"
+  - git config --global init.defaultBranch main
+  - mkdir remote.git && git init --bare remote.git
+  - git clone remote.git local
+  - "cd local && echo '{\"name\":\"project\"}' > package.json && git add package.json && git commit -m 'chore: initial setup' && git push origin main"
+  - cp greeting.js local/greeting.js
+  - cp test.sh local/test.sh
+open:
+  - local/greeting.js

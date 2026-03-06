@@ -1,0 +1,15 @@
+workspace: fresh
+test: bash test.sh
+setup:
+  - git config --global user.email "learner@handhold.io"
+  - git config --global user.name "Learner"
+  - git config --global init.defaultBranch main
+  - git init .
+  - echo "feature content" > feature.txt && git add feature.txt && git commit -m "add feature.txt"
+  - echo "line 2" >> feature.txt && git add . && git commit -m "update feature"
+  - echo "config=true" > config.txt && git add config.txt && git commit -m "add config"
+  - echo "config=false" > config.txt && git add config.txt && git commit -m "break config"
+  - echo "final" > final.txt && git add final.txt && git commit -m "add final"
+  - echo "CORRUPTED DATA" > config.txt
+open:
+  - config.txt

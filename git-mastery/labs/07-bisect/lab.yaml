@@ -1,0 +1,12 @@
+workspace: fresh
+test: bash test.sh
+setup:
+  - git config --global user.email "learner@handhold.io"
+  - git config --global user.name "Learner"
+  - git config --global init.defaultBranch main
+  - git init .
+  - for i in 1 2 3 4 5 6 7 8; do printf "// commit %s\nfunction greet() { return 'hello'; }\n" "$i" > app.js && git add app.js && git commit -m "commit $i"; done
+  - printf "// commit 9 - bug introduced\nfunction greet() { return 'WRONG'; }\n" > app.js && git add app.js && git commit -m "commit 9 - refactor greet"
+  - for i in 10 11 12 13 14 15; do printf "// commit %s\nfunction greet() { return 'WRONG'; }\n" "$i" > app.js && git add app.js && git commit -m "commit $i"; done
+open:
+  - bad-commit.txt

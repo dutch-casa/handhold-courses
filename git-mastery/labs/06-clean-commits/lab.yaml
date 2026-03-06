@@ -1,0 +1,16 @@
+workspace: fresh
+test: bash test.sh
+setup:
+  - git config --global user.email "learner@handhold.io"
+  - git config --global user.name "Learner"
+  - git config --global init.defaultBranch main
+  - git config --global core.editor "true"
+  - git init .
+  - "echo 'line 1' > auth.js && git add auth.js && git commit -m 'WIP: start auth'"
+  - echo "line 2" >> auth.js && git add auth.js && git commit -m "more wip"
+  - echo "line 3" >> auth.js && git add auth.js && git commit -m "fix test"
+  - echo "line 4" >> auth.js && git add auth.js && git commit -m "fix lint"
+  - echo "line 5" >> auth.js && git add auth.js && git commit -m "actually done"
+  - echo "line 6" >> auth.js && git add auth.js && git commit -m "typo fix"
+open:
+  - auth.js

@@ -1,0 +1,13 @@
+workspace: fresh
+test: bash local/test.sh
+setup:
+  - git config --global user.email "learner@handhold.io"
+  - git config --global user.name "Learner"
+  - git config --global init.defaultBranch main
+  - mkdir remote.git && git init --bare remote.git
+  - git clone remote.git local
+  - cd local && echo "# Project" > README.md && git add README.md && git commit -m "initial commit" && git push origin main
+  - git clone remote.git /tmp/other-dev && cd /tmp/other-dev && echo "Added by other dev" > other.txt && git add other.txt && git commit -m "add other.txt" && git push origin main
+  - cp test.sh local/test.sh
+open:
+  - local/README.md

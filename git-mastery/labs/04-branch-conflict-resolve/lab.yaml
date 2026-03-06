@@ -1,0 +1,13 @@
+workspace: fresh
+test: bash test.sh
+setup:
+  - git config --global user.email "learner@handhold.io"
+  - git config --global user.name "Learner"
+  - git config --global init.defaultBranch main
+  - git init .
+  - printf "# Project\n\nWelcome to the project.\n" > README.md && git add README.md && git commit -m "initial commit"
+  - printf "# Project\n\nWelcome to the project.\n\nThis project does amazing things.\n" > README.md && git add README.md && git commit -m "add project description"
+  - "git checkout -b feature HEAD~1 && printf '# Project\\n\\nWelcome to the project.\\n\\nInstall with: npm install\\n' > README.md && git add README.md && git commit -m 'add install instructions'"
+  - git checkout main
+open:
+  - README.md

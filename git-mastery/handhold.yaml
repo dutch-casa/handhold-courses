@@ -1,0 +1,163 @@
+title: "Git Mastery: From First Commit to Industry Workflow"
+description: "Git from first principles — object model, every command, trunk-based workflows, GitHub, and CI/CD. Built for developers who've never typed git add."
+tags:
+  - git
+  - github
+  - cicd
+  - version-control
+  - workflow
+
+steps:
+  # ── Module 0: Setup ───────────────────────────────────────────
+  - kind: lesson
+    title: "Lesson 0: Installing and configuring git"
+    path: steps/00-setup.md
+
+  # ── Module 1: Why Version Control Exists ─────────────────────
+  - kind: lesson
+    title: "Lesson 1: The problem"
+    path: steps/01-the-problem.md
+  - kind: lesson
+    title: "Lesson 2: Git's design goals"
+    path: steps/02-design-goals.md
+  - kind: lab
+    title: "Lab 1: Your first repo"
+    path: labs/01-first-repo/
+
+  # ── Module 2: How Git Thinks ──────────────────────────────────
+  - kind: lesson
+    title: "Lesson 3: Four objects"
+    path: steps/03-four-objects.md
+  - kind: lesson
+    title: "Lesson 4: The DAG"
+    path: steps/04-the-dag.md
+  - kind: lesson
+    title: "Lesson 5: The staging area"
+    path: steps/05-staging-area.md
+  - kind: lab
+    title: "Lab 2: Explore the object store"
+    path: labs/02-object-store/
+
+  # ── Module 3: The Daily Workflow ──────────────────────────────
+  - kind: lesson
+    title: "Lesson 6: Reading the repo"
+    path: steps/06-reading-the-repo.md
+  - kind: lesson
+    title: "Lesson 7: Making good commits"
+    path: steps/07-making-good-commits.md
+  - kind: lesson
+    title: "Lesson 8: Undoing things"
+    path: steps/08-undoing-things.md
+  - kind: lesson
+    title: "Lesson 9: git stash"
+    path: steps/09-stash.md
+  - kind: lab
+    title: "Lab 3: Navigate and undo"
+    path: labs/03-navigate-and-undo/
+
+  # ── Module 4: Branching ───────────────────────────────────────
+  - kind: lesson
+    title: "Lesson 10: What a branch is"
+    path: steps/10-what-a-branch-is.md
+  - kind: lesson
+    title: "Lesson 11: Merging"
+    path: steps/11-merging.md
+  - kind: lesson
+    title: "Lesson 12: Merge conflicts"
+    path: steps/12-merge-conflicts.md
+  - kind: lesson
+    title: "Lesson 13: git rebase"
+    path: steps/13-rebase.md
+  - kind: lab
+    title: "Lab 4: Branch, conflict, resolve"
+    path: labs/04-branch-conflict-resolve/
+
+  # ── Module 5: Remote Work ─────────────────────────────────────
+  - kind: lesson
+    title: "Lesson 14: The remote model"
+    path: steps/14-the-remote-model.md
+  - kind: lesson
+    title: "Lesson 15: Push, clone, and tracking"
+    path: steps/15-push-clone-tracking.md
+  - kind: lesson
+    title: "Lesson 16: Tags and cleanup"
+    path: steps/16-tags-and-cleanup.md
+  - kind: lab
+    title: "Lab 5: Collaborate with a remote"
+    path: labs/05-remote-work/
+
+  # ── Module 6: Rewriting History ───────────────────────────────
+  - kind: lesson
+    title: "Lesson 17: Interactive rebase"
+    path: steps/17-interactive-rebase.md
+  - kind: lesson
+    title: "Lesson 18: git reflog"
+    path: steps/18-reflog.md
+  - kind: lesson
+    title: "Lesson 19: Cherry-pick and clean"
+    path: steps/19-cherry-pick-and-clean.md
+  - kind: lab
+    title: "Lab 6: Clean up messy commits"
+    path: labs/06-clean-commits/
+
+  # ── Module 7: Power Tools ─────────────────────────────────────
+  - kind: lesson
+    title: "Lesson 20: git bisect"
+    path: steps/20-bisect.md
+  - kind: lesson
+    title: "Lesson 21: Log archaeology"
+    path: steps/21-log-archaeology.md
+  - kind: lesson
+    title: "Lesson 22: Submodules, worktrees, and config"
+    path: steps/22-submodules-worktrees.md
+  - kind: lab
+    title: "Lab 7: Bisect a bug"
+    path: labs/07-bisect/
+
+  # ── Module 8: The Workflow ────────────────────────────────────
+  - kind: lesson
+    title: "Lesson 23: Commit craft and conventions"
+    path: steps/23-commit-craft.md
+  - kind: lesson
+    title: "Lesson 24: The three workflows"
+    path: steps/24-the-three-workflows.md
+  - kind: lesson
+    title: "Lesson 25: Code review culture"
+    path: steps/25-code-review.md
+  - kind: lab
+    title: "Lab 8: Build a clean feature"
+    path: labs/08-clean-feature/
+
+  # ── Module 9: GitHub ──────────────────────────────────────────
+  - kind: lesson
+    title: "Lesson 26: What GitHub adds"
+    path: steps/26-what-github-adds.md
+  - kind: lesson
+    title: "Lesson 27: Fork and the open source model"
+    path: steps/27-fork-and-oss.md
+  - kind: lesson
+    title: "Lesson 28: GitHub Actions"
+    path: steps/28-github-actions.md
+  - kind: lesson
+    title: "Lesson 29: GitHub in practice"
+    path: steps/29-github-in-practice.md
+  - kind: lab
+    title: "Lab 9: Complete PR workflow"
+    path: labs/09-pr-workflow/
+
+  # ── Module 10: CI/CD ──────────────────────────────────────────
+  - kind: lesson
+    title: "Lesson 30: Building a pipeline"
+    path: steps/30-building-a-pipeline.md
+  - kind: lesson
+    title: "Lesson 31: Deployment patterns"
+    path: steps/31-deployment-patterns.md
+  - kind: lesson
+    title: "Lesson 32: Putting it all together"
+    path: steps/32-putting-it-together.md
+  - kind: lab
+    title: "Lab 10: Write a CI workflow"
+    path: labs/10-github-actions/
+  - kind: lab
+    title: "Lab 11: Capstone — end-to-end workflow"
+    path: labs/11-capstone/

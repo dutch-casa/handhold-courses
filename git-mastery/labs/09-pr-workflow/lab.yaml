@@ -1,0 +1,14 @@
+workspace: fresh
+test: bash local/test.sh
+setup:
+  - git config --global user.email "learner@handhold.io"
+  - git config --global user.name "Learner"
+  - git config --global init.defaultBranch main
+  - mkdir upstream.git && git init --bare upstream.git
+  - mkdir fork.git && git init --bare fork.git
+  - "git clone upstream.git _seed && cd _seed && echo '{\"name\":\"app\"}' > package.json && mkdir src && echo 'console.log(\"hello\")' > src/index.js && git add . && git commit -m 'chore: initial project setup' && git push origin main && cd .. && rm -rf _seed"
+  - git -C fork.git fetch ../upstream.git refs/heads/main:refs/heads/main
+  - git clone fork.git local && cd local && git remote add upstream ../upstream.git
+  - cp test.sh local/test.sh
+open:
+  - local/src/index.js
